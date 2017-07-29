@@ -1,0 +1,220 @@
+
+
+* {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+
+body {
+	padding-bottom: 60px;
+}
+
+.res {
+	background: orange;
+	position: fixed;
+	padding: 20px;
+	bottom: 20px;
+	left: 20px;
+	z-index: 9999999;
+}
+
+.collapse-top {
+
+	@extend .bg-inverse;
+	@extend .text-xs-center;
+
+	h1 {
+		margin-bottom: 40px;
+	}
+
+	.container {
+		padding: 80px;
+	}
+
+	.bd-cross {
+		@extend .pull-xs-right;
+		color: white;
+		margin: 30px;
+	}
+
+	background-color: $brand-primary;
+}
+
+.card {
+	.card-img-top {
+		max-width: 100%;
+
+		#safety & {
+			margin-top: 20px;	
+		}
+	}
+
+	background-color: rgb(245, 247, 250);
+	border: 1px solid rgb(230, 233, 237);
+	border-bottom: 2px solid rgb(230, 233, 237);
+
+	&:not(.no-top-border) {
+		border-top: 2px solid rgb(11, 184, 200);
+	}
+
+}
+
+header {
+	@extend .text-xs-center;
+
+	min-height: 60vh;
+	width: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	display: -webkit-flex;
+	align-items: center;
+
+	&:before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0, 0.4);
+		z-index: 9;
+	}
+
+	p, h1 {
+		color: white;
+	}
+
+	.container * {
+		position: relative;
+		z-index: 10;
+	}
+
+	[page="home"]  & { background-image: url(/assets/headers/home.jpg); }
+	[page="legal"] & { background-image: url(/assets/headers/legal.jpg); }
+	[page="hosts"] & { background-image: url(/assets/headers/hosts.jpg); }
+	[page="guest"] & { background-image: url(/assets/headers/home.jpg); }
+}
+
+nav {
+
+	&#mainNavbar {
+		background: white;
+		top: 0px;
+	}
+
+
+	&.navbar {
+		padding: 0px;
+	}
+
+	.nav-link, .navbar-toggler {
+		line-height: 60px;
+		padding: 0px !important;
+	}
+
+	.navbar-brand {
+		padding: 0px;
+		img {
+			margin:0px;
+			max-height: 60px;
+			max-width: 60px;
+		}
+	}
+
+	.call-to-action {
+		@extend .pull-xs-right;
+		margin-right: 16px;
+		line-height: 60px;
+		padding: 0px;
+	}
+
+	&.navbar-fixed-bottom {
+		
+		padding-right: 16px;
+		.icon {
+			top: 2px;
+			position: relative;
+			color: $brand-primary;
+		}
+	}
+}
+
+main {
+	background: white;
+
+	section {
+		padding: 150px 0px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		h1:first-child {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+footer {
+	section {
+
+		&:first-child {
+			padding: 40px 0px;
+			background-color: rgb(51, 57, 60);
+			color: rgb(163, 177, 191);
+
+			.logo {
+				max-width: 100%;
+				margin-bottom: 20px
+			}
+
+			.social {
+
+			}
+
+			p.lead {
+				color: white;
+				margin-bottom: 5px
+			}
+
+			p:last-child {
+				margin-bottom: 0px;
+			}
+
+			li:before {
+				display: inline-block;
+				content: "·";
+				padding-right: 12px;
+			}
+		}
+
+		&:last-child {
+			padding: 20px;
+			
+			p {
+				color: rgb(112, 126, 140);
+				margin-bottom: 0px;
+			}
+
+			ul {
+				margin-bottom: 0px;
+
+				li {
+					padding: 0px;
+					padding-left: 10px;
+
+					&:not(:first-child):before {
+						display: inline-block;
+						content: "·";
+						padding-right: 12px;
+					}
+
+					a {
+						color: #707E8C;
+					}
+				}
+
+				
+			}
+		}
+	}
+}

@@ -1,0 +1,97 @@
+@font-face {
+	font-family: 'Avenir Book';
+	src: url('../fonts/Avenir-Book.eot');
+	src: url('../fonts/Avenir-Book.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Avenir-Book.woff') format('woff'),
+		url('../fonts/Avenir-Book.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir Heavy';
+	src: url('../fonts/Avenir-Heavy.eot');
+	src: url('../fonts/Avenir-Heavy.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Avenir-Heavy.woff') format('woff'),
+		url('../fonts/Avenir-Heavy.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'si';
+    src: url('../fonts/socicon.eot');
+    src: url('../fonts/socicon.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/socicon.woff') format('woff'),
+         url('../fonts/socicon.ttf') format('truetype'),
+         url('../fonts/socicon.svg#icomoonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+ 
+}
+ 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family:si;
+        src: url(../fonts/socicon.svg) format(svg);
+    }
+}
+
+
+.social {
+    overflow: hidden;
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.social li {
+    display:inline-block;
+    *display:inline;
+    zoom:1;
+}
+
+.social {
+    font-family: si !important;
+    font-style:normal;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;
+    -o-transition:.1s;
+    -ms-transition:.1s;
+    -moz-transition:.1s;
+    -webkit-transition:.1s;
+    transition:.1s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    overflow:hidden;
+    text-decoration:none;
+    text-align:center;
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.social-instagram:before {
+    content:'x';
+}
+.social-facebook:before {
+    content:'b';
+}
+.social-youtube:before {
+    content:'r';
+}
+.social-twitter:before {
+    content:'a';
+}

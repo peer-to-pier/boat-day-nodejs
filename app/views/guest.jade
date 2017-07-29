@@ -1,0 +1,50 @@
+extends layout
+
+block nav-links
+	li.nav-item
+		a.nav-link.active(href="#header") BoatDay
+	li.nav-item
+		a.nav-link(href="#account") User Account
+
+block nav-c2a
+	a.btn.btn-primary(href="/boatdays") Find a BoatDay
+
+block content
+	section#account
+		.container
+			.row
+
+				.col-sm-7.col-sm-offset-4
+					.card
+						.card-block
+							p.lead.card-title Login
+							form(method="post" action="/users/login")
+								.form-group
+									input(type="email" name="email" placeholder="Email" required="true").form-control
+								.form-group
+									input(type="password" name="pass" placeholder="Password" required="true").form-control
+								.form-group
+									button.btn.btn-primary(type="submit") Login
+									span.small &#160; or &#160;
+									a.btn.btn-primary-outline(href="/users/new") Create Account
+							p.card-text
+								
+							p.card-text
+								a.small.text-muted(href="/users/forgot").card-link Forgot password?
+
+				.col-sm-7.col-sm-offset-1
+					.card
+						.card-block
+							p.lead.card-title Social Account
+							p.card-text Connect using your social media account.
+							p.card-text
+								button.btn.btn-primary-outline.text-xs-left <span class="bd-facebook"></span> Facebook
+								| 
+								button.btn.btn-primary-outline.text-xs-left <span class="bd-twitter"></span> twitter
+
+				.col-sm-24
+					p.text-sm-center
+						br
+						br
+
+			

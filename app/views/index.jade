@@ -1,0 +1,100 @@
+extends layout
+
+block collapse-top
+	.container
+
+block nav-links
+	li.nav-item
+		a.nav-link.active(href="#header") BoatDay
+	li.nav-item
+		a.nav-link(href="#concept") How it works
+	li.nav-item
+		a.nav-link(href="#reviews") Reviews
+	li.nav-item
+		a.nav-link(href="#safety") Safety first
+	li.nav-item
+		a.nav-link(href="#boat-owner") Boat Owners
+
+block nav-c2a
+	a.btn.btn-primary(href="/boatdays") Find a BoatDay
+
+block header
+	.container
+		h1 Welcome to BoatDay
+		p.lead Instant access to fun and affordable boating with friends.
+		a.btn.btn-primary(href="#concept") How it works
+
+block content
+	section#concept
+		.container.text-xs-center
+			h1 How it works
+			.row
+				.col-sm-6
+					p.lead 1. Browse
+					p Cruising, fishing, watersports and more, the website shows you available trips in your area.
+
+				.col-sm-6
+					p.lead 2. Book
+					p Reserve a spot onboard for yourself, for a group, or book the entire boat. The choice is yours
+
+				.col-sm-6
+					p.lead 3. Enjoy
+					p Head to the marina, meet your Captain and other guests, and enjoy a great day on the water.
+
+				.col-sm-6
+					p.lead 4. Repeat
+					p Per-person pricing means frequent, friendly and affordable boating. Book your next BoatDay
+			br
+			br
+			br
+			a(href="/boatdays").btn.btn-primary-outline.btn-lg Browse BoatDays
+
+	section.bg-inverse#reviews(style="background-image: url(assets/sections/blurred-02.jpg)")
+		.container.text-xs-center		
+			h1 Latest Reviews
+			
+	section#safety
+		.container.text-xs-center
+			h1 Safety first
+
+			.card-deck-wrapper
+				.card-deck
+					.card
+						img.card-img-top(src="assets/safety-features/background.png")
+						.card-block
+							h5.card-title Background Screening
+							p.card-text Every BoatDay Host is subject to a background screening, including a search of national and county databases, as well as DMV records and the sex-offender registry.
+					.card
+						img.card-img-top(src="assets/safety-features/certificate.png")
+						.card-block
+							h5.card-title Boater Certifications
+							p.card-text BoatDay displays all boating certifications obtained by each Host. From boater safety-features courses to fishing, diving and captains licenses, view each Host's certifications when making your choice
+					.card
+						img.card-img-top(src="assets/safety-features/star.png")
+						.card-block
+							h5.card-title Peer Reviews
+							p.card-text Hosts and Guests can leave ratings and reviews after every BoatDay, which are used to maintain our high quality standards. For added reassurance, read through past reviews when picking a BoatDay.
+				.card-deck
+					.card
+						img.card-img-top(src="assets/safety-features/assistance.png")
+						.card-block
+							h5.card-title On-Water Assistance
+							p.card-text Quickly contact and receive on-water assistance directly through the app. To directly contact emergency on-water assistance, tap the safety-features Icon from the screen displayed throughout the duration of your BoatDay.
+					.card
+						img.card-img-top(src="assets/safety-features/speech-bubble.png")
+						.card-block
+							h5.card-title Customer Support
+							p.card-text BoatDay's customer support team will be standing by to address all of your concerns. Reach us any time via email at support@boatdayapp.com.
+					.card
+						img.card-img-top(src="assets/safety-features/cross.png")
+						.card-block
+							h5.card-title Zero Tolerance
+							p.card-text BoatDay has a zero-tolerance policy toward drug use and offensive behavior. To report suspected abuse of this policy, contact support@boatdayapp.com or flag offenders through the app
+
+	section.bg-inverse#boat-owner(style="background-image: url(assets/sections/blurred-01.jpg)")
+		.container.text-xs-center
+			h1 Own Your Boat?
+			p.lead Become a Certified BoatDay Host and take the most out of your BoatDays by taking on board new people.
+			a(href="/host").btn.btn-primary Learn more
+
+			

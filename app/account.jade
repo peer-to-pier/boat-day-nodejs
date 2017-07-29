@@ -1,0 +1,33 @@
+extends layout 
+
+block content
+	if !_SessionUser
+		h2 Login
+		form(method="POST" action="/users/login")
+			input(name="email" type="text" value="test@test.com")
+			br
+			input(name="pass" type="password" value="test@test.com")
+			br
+			input(type="submit")
+
+		h2 Sign Up
+		form(method="POST" action="/users/signup")
+			.form-group
+				input(name="email" type="text" value="test@test.com").form-control
+			.form-group
+				input(name="pass" type="password" value="test@test.com").form-control
+			.form-group
+				input(type="submit").btn.btn-primary
+
+		h2 Facebook
+		a(href="javascript:fb()") Facebook login
+
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+	else
+		h3 Logout
+		a(href="users/logout") Logout now!
